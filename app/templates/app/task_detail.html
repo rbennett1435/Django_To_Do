@@ -1,0 +1,15 @@
+{% load static %}
+<link href="{% static 'style.css' %}" rel="stylesheet" />
+<body>
+  <div class="card">
+    <h1 class="header">Task: {{task}}</h1>
+    <h1 class="header">User: {{task.user}}</h1>
+  </div>
+  <div class="card">
+    <h2 class="text">Description: {{task.description}}</h2>
+  </div>
+  <div class="card">
+    <h2 class="text">Is Complete: {{task.complete}}</h2>
+  </div>
+  <a href="{% url 'home' %}" class="smalllink">Go Back</a>
+</body>
